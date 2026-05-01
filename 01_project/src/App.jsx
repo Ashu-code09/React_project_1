@@ -1,13 +1,17 @@
 import React from 'react'
-// import "./App.css"
+
+import Card from './Components/Card'
+import jobOpenings from './utils/JobData'
+
 
 const App = () => {
-  return (
-    <>
-    <div id='header'><h1>Hello world</h1></div>
-    
-    </>
-  )
+return (
+  <div className="parent">
+    {jobOpenings.map((el,idx) => {
+      return <div key={idx}><Card company={el} /></div> 
+    })}
+  </div>
+)
 }
 
 export default App
